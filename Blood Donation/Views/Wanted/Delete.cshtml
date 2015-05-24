@@ -1,0 +1,54 @@
+﻿@model Blood_Donation.Models.BloodWanted
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>BloodWanted</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Contact_No)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact_No)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Reason)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reason)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Blood_Group)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Blood_Group)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.When_needed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.When_needed)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

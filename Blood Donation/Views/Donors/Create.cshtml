@@ -1,0 +1,112 @@
+﻿@model Blood_Donation.Models.Donors
+
+@{
+    ViewBag.Title = "Register";
+}
+@Styles.Render("~/includes/css/style");
+
+<head>
+<style type="text/css">
+    	   	fieldset {
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+
+legend {
+border: solid 1px black;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+    label {
+        float: left; margin-right:5px
+    }
+    .editor-field {
+        margin-bottom: 20px; float:none
+    }
+</style>
+
+</head>
+<h2 style="margin-top:60px; margin-left:5px"></h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset style="margin-left:20px; margin-right:20px">
+        <legend>Register</legend>
+
+        <label>Name: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <label>Address: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <label>Contact: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contact_No)
+            @Html.ValidationMessageFor(model => model.Contact_No)
+        </div>
+
+        <label>Email: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <label>Password: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <label>Blood Group: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Blood_Group)
+            @Html.ValidationMessageFor(model => model.Blood_Group)
+        </div>
+
+        <label>Age: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Age)
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+
+        <label>NID: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NID)
+            @Html.ValidationMessageFor(model => model.NID)
+        </div>
+
+        <label>Area: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Area)
+            @Html.ValidationMessageFor(model => model.Area)
+        </div>
+
+        <label>Last Donated: </label>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Last_Donated)
+            @Html.ValidationMessageFor(model => model.Last_Donated)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

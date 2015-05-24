@@ -1,0 +1,404 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Kazi Mohammed Erfan
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+#features {
+margin-bottom:50px;
+}
+
+#features img {
+height:150px;
+}
+
+#reasons {
+background-color:#e6e7e8;
+padding-bottom:80px;
+}
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+   
+   
+.special-font {
+font-family:'Courgette', arial, sans serif;
+}
+
+p.special-font{
+margin-bottom:30px;
+}
+.editor-label {
+margin-left:50px;
+}
+
+#bigCallout {
+color:#ffffff;
+background-color:#e85356;
+}
+
+#bigCallout h1{
+padding-top:50px;
+padding-bottom:20px;
+}
+
+#bigCallout p{
+font-size:20px;
+padding-bottom:50px;
+}
+
+#bigCallout1 {
+color:#ffffff;
+ background:#000 url("../../images/8.jpg") no-repeat top center;
+ height:230px;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-attachment:fixed;
+text-align:center !important;
+}
+
+#bigCallout2 {
+color:#ffffff;
+ background:#000 url("../../images/9.jpg") no-repeat top center;
+ height:230px;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-attachment:fixed;
+text-align:center !important;
+margin-bottom:30px;
+}
+
+#bigCallout1 h1{
+padding-top:50px;
+padding-bottom:20px;
+}
+
+#bigCallout1 p{
+font-size:20px;
+padding-bottom:50px;
+}
+
+#bigCallout2 h1{
+padding-top:50px;
+padding-bottom:20px;
+}
+
+.lead {
+padding-bottom:20px;
+}
+
+#featuresHeading h1 {
+margin:80px 0 50px 0;
+}
+
+#featuresHeading1 h1 {
+margin:80px 0 50px 0;
+}
+
+#footer-contact a {
+color:#e85356;
+}
+
+.word-highlight {
+ color:#e85356;
+}
+
+.tabbable a{
+color:#e85356;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   
+   
+#searchInput {
+	width: 200px;
+}
+
+.navbar-brand {
+	padding: 13px 15px;
+}
+
+.navbar-nav  li a:hover {
+    font-family:'Book Antiqua';
+    font-weight:bold;
+    color:#e85356;
+}
+
+.dropdown-menu li a:hover {
+color:#ffffff;
+}
+
+.btn-default {
+background-color:#e85356;
+border:#e85356;
+}
+
+.btn-default:hover {
+background-color:#d5d5d5;
+border:#e85356;
+}
+
+.bg-content {
+margin:80px 0 0 0;
+}
+   
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+   
+   
+#myCarousel {
+	margin-top: 45px;
+	background-color:#000000;
+}
+
+.img-responsive{
+width:100%;
+height:30px;
+}
+
+.carousel-caption {
+	font-size: 24px;
+}
+
+.carousel-caption h4 {
+	font-size: 32px;
+}
+
+#myCarousel .item { 
+height: 400px;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#about .item{
+height: 300px;
+}
+
+#about-me {
+margin:50px 0;
+}
+
+#about-me p {
+font-size:15px;
+}
+
+#services2 {
+margin-top:50px;
+margin-bottom:50px;
+}
+
+.tab-pane {
+margin-top:30px;
+}
+
+.tabbable {
+margin-top:30px;
+}
+
+#moreInfo .col-sm-2 {
+border-right:2px solid #e85356;
+}
+
+#moreInfo img{
+margin:10px 0;
+}
+
+#slide1 {
+	background: url('../../images/1.jpg') top center no-repeat;
+}
+
+#slide2 {
+	background: url('../../images/2.jpg') top center no-repeat;
+}
+
+#slide3 {
+	background: url('../../images/3.jpg') top center no-repeat;
+}
+
+.img-circle {
+border: 7px solid #e85356;
+margin-bottom:10px;
+width:150px;
+height:150px;
+}
+
+.carousel-caption.img-circle {
+border:8px solid #e85356;
+}
+
+.carousel .item {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.carousel .active.left, .carousel .active.right {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+
+.carousel .next, .carousel .prev {
+    left:0;
+    opacity:1;
+    z-index:1;
+}
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+   
+   
+
+
+/* --------------------------------------
+   Using this
+   -------------------------------------- */
+
+
+.using-this {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.using-this h3 {
+    margin: 0 40px 40px 50px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px dotted #aaa;
+    font-size: 36px;
+    font-weight: 400;
+    color: #2d2d2d;
+    text-align: left;
+}
+
+.using-this-container {
+    text-align: center;
+}
+
+.using-this-container a {
+    display: inline-block;
+    width: 185px;
+    height: 77px;
+    margin: 5px;
+    background: #f8f8f8;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+.using-this-container a.using-this-google { background-image: url(../../images/google.png); }
+.using-this-container a.using-this-youtube { background-image: url(../../images/youtube.png); }
+.using-this-container a.using-this-pinterest { background-image: url(../../images/pinterest.png); }
+
+.using-this-container a.using-this-google:hover { background-image: url(../../images/google-hover.png); }
+.using-this-container a.using-this-youtube:hover { background-image: url(../../images/youtube-hover.png); }
+.using-this-container a.using-this-pinterest:hover { background-image: url(../../images/pinterest-hover.png); }
+
+
+/* --------------------------------------
+   Footer
+   -------------------------------------- */
+
+footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    background: #2d2d2d url(../../images/pattern.jpg);
+    color: #aaaaaa;
+}
+
+
+.hideme
+{
+    opacity:0;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+     h1, h2{
+	font-size:35px;
+	}
+	
+     p{
+	font-size:18px;
+	}
+	
+	#bigCallout p {
+	font-size:15px;
+	}
+	
+	#bigCallout1 p {
+	font-size:15px;
+	}
+	
+	.panel p {
+	font-size:15px;
+	}
+	
+	#footer-contact p {
+	font-size:15px;
+	}
+	
+	#moreInfo p{
+	font-size:15px;
+	}
+	
+	#services1 p {
+	font-size:15px;
+	}
+	
+	#services2 p {
+	font-size:15px;
+	}
+	
+	.fa{
+	margin-top:30px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.hideme
+{
+    opacity:1;
+}
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	
+}

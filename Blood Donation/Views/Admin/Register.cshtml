@@ -1,0 +1,58 @@
+﻿@model Blood_Donation.Models.Donors
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Registeration Failed, fields.");
+    <div>
+        <fieldset>
+            <legend>Register Form</legend>
+            <div class="editor-label">@Html.LabelFor(u => u.Name)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Name)
+                @Html.ValidationMessageFor(u => u.Name)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.email)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.email)
+                @Html.ValidationMessageFor(u => u.email)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Password)</div>
+            <div class="editor-field">@Html.PasswordFor(u => u.Password)
+                @Html.ValidationMessageFor(u => u.Password)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Address)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Address)
+                @Html.ValidationMessageFor(u => u.Address)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Age)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Age)
+                @Html.ValidationMessageFor(u => u.Age)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Area)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Area)
+                @Html.ValidationMessageFor(u => u.Area)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Blood_Group)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Blood_Group)
+                @Html.ValidationMessageFor(u => u.Blood_Group)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Contact_No)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Contact_No)
+                @Html.ValidationMessageFor(u => u.Contact_No)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.NID)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.NID)
+                @Html.ValidationMessageFor(u => u.NID)
+            </div>
+            <div class="editor-label">@Html.LabelFor(u => u.Last_Donated)</div>
+            <div class="editor-field">@Html.TextBoxFor(u => u.Last_Donated)
+                @Html.ValidationMessageFor(u => u.Last_Donated)
+            </div>
+ 
+            <input type="submit" value="Register" />
+        </fieldset>
+    </div>
+}

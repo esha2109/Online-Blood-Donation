@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+		
+		<!-- Website Title & Description for Search Engine purposes -->
+		<meta charset="utf-8">
+		<title>Blood Donation | SE Project</title>
+		<meta name="description" content="Blood Donation | SE Project">
+		<meta name="author" content=" Kazi Mohammed Ehsan ">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="~/includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="~/font-awesome-4.0.3/css/font-awesome.min.css">
+		
+		<!-- Custom CSS -->
+		<link href="~/includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="~/includes/js/modernizr-2.6.2.min.js"></script>
+
+         <!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery (If you wish you can add the hard coded version)-->
+	<script src="~/includes/js/jquery-1.8.2.min.js"></script>
+
+	<!-- Scrolling effect -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+	    <script type="text/javascript" src="~/includes/js/jquery.appear.js"></script>	
+	
+	<!-- Bootstrap JS -->
+	<script src="~/bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="~/includes/js/script.js"></script>
+		
+	</head>
+    
+    <body style="background-color:#EEEEEE"> 
+        <!-- Fixed navigation bar -->
+        
+	    <div class="navbar navbar-fixed-top;" style="margin-bottom:30px">
+				<div class="container">
+					
+					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+					<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				
+					<a class="navbar-brand" href="/"><img src="~/images/logo.png" width="150" height="21" alt="Blood Donation"/></a>
+					
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="~/Home/Index">Home</a>
+							</li>
+							
+							<li>
+								<a href="~/Donors/Index">Donor List</a>
+							</li>
+							
+							<li>
+					            <a href="~/Wanted/Index">Blood Wanted</a>
+							</li>
+						
+							<li>
+								<a href="~/Home/About">About Us</a>
+							</li>
+							
+							<li>
+								<a href="~/Home/Contact">Contact</a>
+							</li>
+							
+							
+						</ul>
+                        <ul class="nav navbar-nav pull-right">
+                            <li><div style="margin-left:20px; margin-top:13px">
+            @if (Request.IsAuthenticated)
+            {
+                if (User.Identity.Name == "Admin")
+                {
+                    <strong>@Html.ActionLink(User.Identity.Name,"Index","Admin")</strong>
+                    @Html.ActionLink("Log Out", "Logout", "Admin")
+                }
+                else{
+                <strong>@Html.ActionLink(User.Identity.Name,"IndexUser","Donors")</strong>
+                @Html.ActionLink("Log Out", "Logout", "Donors")
+                }
+            }
+            else
+            {
+                @Html.ActionLink("Register", "Create", "Donors")
+                <span>     |     </span>
+                @Html.ActionLink("Log In", "Login", "Donors")
+            }
+        </div></li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+							<input type="text" class="form-control" placeholder="Search..." id="searchInput">
+							<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+						</form>
+                        <!-- end navbar-form -->
+						
+					</div><!-- end nav-collapse -->
+				
+				</div><!-- end container -->
+				
+			<div class="row">
+			    <img src="~/images/header_shadow.png" alt="Header Shadow" class="img-responsive"/>
+		    </div><!-- end navbar shadow -->
+	    </div><!-- end navbar -->
+              
+        <div>
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+       
+    </body>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</html>

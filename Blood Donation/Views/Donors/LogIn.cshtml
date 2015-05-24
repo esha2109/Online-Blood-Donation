@@ -1,0 +1,51 @@
+﻿@model Blood_Donation.Models.Donors
+ 
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <head>
+<title>Log In</title>
+
+
+<style type="text/css">
+    	   	fieldset {
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+
+legend {
+border: solid 1px black;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+    .editor-label {
+        float: left; margin-right:5px
+    }
+    .editor-field {
+        margin-bottom: 20px; float:none
+    }
+</style>
+
+</head>
+<h2 style="margin-top:160px; margin-left:20px"></h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Login Failed, check details");
+    <div>
+        <fieldset style="margin-left:20px; margin-right:20px">
+            <legend>Login</legend>
+            <div class="editor-label"><Label>Email: </Label></div>
+            <div class="editor-field">@Html.TextBoxFor(u=> u.email)
+                @Html.ValidationMessageFor(u=> u.email)
+            </div>
+            <div class="editor-label"><label>Password: </label></div>
+            <div  class="editor-field">@Html.PasswordFor(u=> u.Password)
+                @Html.ValidationMessageFor(u=> u.Password)
+            </div>
+            <input type="submit" value="Log In" />
+        </fieldset>
+    </div>
+}

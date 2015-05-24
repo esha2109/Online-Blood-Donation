@@ -1,0 +1,50 @@
+﻿@model Blood_Donation.Models.BloodWanted
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BloodWanted</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Contact_No)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact_No)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Reason)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reason)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Blood_Group)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Blood_Group)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.When_needed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.When_needed)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.WantedID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
